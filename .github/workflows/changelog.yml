@@ -1,0 +1,21 @@
+name: changelog
+
+permissions:
+  contents: write
+  pull-requests: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please-action:
+    runs-on: [self-hosted, Linux, standard]
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: changelog
+        with:
+          release-type: simple
+          skip-github-pull-request: false
+          skip-github-release: true
