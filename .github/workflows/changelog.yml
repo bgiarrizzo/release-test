@@ -11,7 +11,7 @@ on:
 
 jobs:
   release-please-action:
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v4
         id: changelog
