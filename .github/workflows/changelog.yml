@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v4
-        id: changelog
         with:
           release-type: simple
           skip-github-pull-request: false

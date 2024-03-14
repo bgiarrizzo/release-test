@@ -1,0 +1,37 @@
+name: release
+
+
+permissions:
+  contents: write
+  pull-requests: write
+  
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get changelog body
+        run: |
+          awk '/^## / {if (found) exit; else found=1; print} found && !/^## / && !/^$/ {print}' CHANGELOG.md
+        id: get_changelog
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: |
+            ${{ steps.get_changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
