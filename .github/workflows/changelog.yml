@@ -21,11 +21,11 @@ jobs:
           echo "ref_name: ${{ github.ref_name }}"
           echo "event_name: ${{ github.event_name }}"
           echo "commit name: ${{ github.event.head_commit.message }}"
-          
+
       - uses: google-github-actions/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: NiqueToi
-        if: github.head_ref == 'release-please--branches--main'
+        if: "${{ startsWith(github.event.head_commit.message, 'chore(main): release') }}"
         uses: ./.github/workflows/release.yml
