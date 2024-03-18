@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/bgiarrizzo/release-test/compare/v0.9.0...v0.10.0) (2024-03-18)
+
+
+### Features
+
+* **test:** testpipou ([#21](https://github.com/bgiarrizzo/release-test/issues/21)) ([46dd461](https://github.com/bgiarrizzo/release-test/commit/46dd46165d5e05a4493942bcc015a599de7a9a2d))
+
 ## [0.9.0](https://github.com/bgiarrizzo/release-test/compare/v0.8.0...v0.9.0) (2024-03-18)
 
 
