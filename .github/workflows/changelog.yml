@@ -17,6 +17,9 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 
+      - name: Print branch name
+        run: echo "Branch name is ${{ github.head_ref }}"
+
+      - name: NiqueToi
         if: github.head_ref == 'release-please--branches--main'
         uses: ./.github/workflows/release.yml
