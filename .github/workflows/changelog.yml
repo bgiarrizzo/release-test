@@ -9,26 +9,26 @@ on:
     branches:
       - main
 
+env:
+  AUTORELEASE_DEFAULT_LABEL: "autorelease: pending"
+  AUTORELEASE_TAGGED_LABEL: "autorelease: tagged"
+
 jobs:
   release-please-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Print branch name
+      - name: Remove Label autorelease pending
         run: |
-          echo "ref: ${{ github.ref }}"
-          echo "head_ref: ${{ github.head_ref }}"
-          echo "base_ref: ${{ github.base_ref }}"
-          echo "ref_name: ${{ github.ref_name }}"
-          echo "event_name: ${{ github.event_name }}"
-          echo "commit name: ${{ github.event.head_commit.message }}"
-          echo "pullrequest number: ${{ github.ref }}"
+          gh pr list -s merged -l ${{ env.AUTORELEASE_DEFAULT_LABEL }} --json number jq -r '.[].number' | xargs -n1 -I {} gh pr edit {} --remove-label ${{ env.AUTORELEASE_DEFAULT_LABEL }}
 
       - uses: google-github-actions/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Start Release Job
-        if: "${{ startsWith(github.event.head_commit.message, 'chore(main): release') }}"
-        uses: ./.github/workflows/release.yml
+  release:
+    name: Release
+    needs: release-please-action
+    uses: ./.github/workflows/release.yml
+    if: "${{ startsWith(github.event.head_commit.message, 'chore(main): release') }}"
