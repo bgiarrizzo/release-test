@@ -7,3 +7,4 @@ testpipou
 testNiqueTesMortsSurleVieuxPorc
 testLaCalotteDeSesMorts
 testCaRaceHure
+testCetaitSurEnFait
