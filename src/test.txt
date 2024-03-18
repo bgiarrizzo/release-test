@@ -6,3 +6,4 @@ testMonZeub
 testpipou
 testNiqueTesMortsSurleVieuxPorc
 testLaCalotteDeSesMorts
+testCaRaceHure
