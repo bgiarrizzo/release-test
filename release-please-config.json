@@ -1,6 +1,5 @@
 {
     "draft": false,
-    "skip-github-release": true,
     "packages": {
         ".": {
             "release-type": "simple"
