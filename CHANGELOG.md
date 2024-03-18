@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/bgiarrizzo/release-test/compare/v0.8.0...v0.9.0) (2024-03-18)
+
+
+### Features
+
+* **test:** testMonZeub ([#19](https://github.com/bgiarrizzo/release-test/issues/19)) ([50f5a4a](https://github.com/bgiarrizzo/release-test/commit/50f5a4ac10b49eda7d504b2075d3c5c16ab71961))
+
 ## [0.8.0](https://github.com/bgiarrizzo/release-test/compare/v0.7.0...v0.8.0) (2024-03-18)
 
 
