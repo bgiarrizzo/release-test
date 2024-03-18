@@ -19,5 +19,6 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
           release-type: simple
+          skip-labeling: true
           skip-github-pull-request: false
           skip-github-release: true
