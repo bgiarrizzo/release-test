@@ -16,3 +16,7 @@ jobs:
       - uses: google-github-actions/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 
+        if: ${{ contains(github.event.pull_request.title, 'chore(main): release')  }}
+        uses: ./.github/workflows/release.yml
