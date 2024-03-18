@@ -2,7 +2,8 @@
     "draft": false,
     "packages": {
         ".": {
-            "release-type": "simple"
+            "release-type": "simple",
+            "skip-github-release": true
         }
     },
     "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
