@@ -8,5 +8,5 @@
             "prerelease": false
         }
     },
-    "$skip-labeling": true
+    "$.skip-labeling": true
 }
