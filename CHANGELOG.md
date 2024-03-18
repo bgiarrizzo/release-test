@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/bgiarrizzo/release-test/compare/v0.10.0...v0.11.0) (2024-03-18)
+
+
+### Features
+
+* **test:** testNiqueTesMortsSurleVieuxPorc ([#23](https://github.com/bgiarrizzo/release-test/issues/23)) ([a71a3c5](https://github.com/bgiarrizzo/release-test/commit/a71a3c509954fb62737e6b6b2f8c8f2301edf3df))
+
 ## [0.10.0](https://github.com/bgiarrizzo/release-test/compare/v0.9.0...v0.10.0) (2024-03-18)
 
 
