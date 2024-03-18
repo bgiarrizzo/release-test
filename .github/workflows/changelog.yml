@@ -18,7 +18,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print branch name
-        run: echo "Branch name is ${{ github.head_ref }}"
+        run: |
+          echo "ref: ${{ github.ref }}"
+          echo "head_ref: ${{ github.head_ref }}"
+          echo "base_ref: ${{ github.base_ref }}"
+          echo "ref_name: ${{ github.ref_name }}"
+          echo "event_name: ${{ github.event_name }}"
 
       - name: NiqueToi
         if: github.head_ref == 'release-please--branches--main'
