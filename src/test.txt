@@ -9,3 +9,4 @@ testLaCalotteDeSesMorts
 testCaRaceHure
 testCetaitSurEnFait
 testAbouDidé
+testGroMichel
