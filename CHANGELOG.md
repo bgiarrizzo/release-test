@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.7.0](https://github.com/bgiarrizzo/release-test/compare/v0.6.0...v0.7.0) (2024-03-18)
+
+
+### Features
+
+* **folder:** test ([d3275f3](https://github.com/bgiarrizzo/release-test/commit/d3275f34bb9ffc40efc71bcc5fccfdf1740c20da))
+* **folder:** test10 ([#11](https://github.com/bgiarrizzo/release-test/issues/11)) ([78c8c21](https://github.com/bgiarrizzo/release-test/commit/78c8c211cebab879627930ef2e7789e94d1b0d74))
+* **folder:** test2 ([a4bb7d1](https://github.com/bgiarrizzo/release-test/commit/a4bb7d1d44a586e020f0e315e557e1e6d6d0269b))
+* **folder:** test3 ([be6dcdd](https://github.com/bgiarrizzo/release-test/commit/be6dcdd0ab6b8ebcc9a132d84ec5a7735a6a07e8))
+* **folder:** test5 ([#5](https://github.com/bgiarrizzo/release-test/issues/5)) ([bbf10c8](https://github.com/bgiarrizzo/release-test/commit/bbf10c884cb45536e59eb74500107e9482b33efc))
+* **folder:** test6 ([#6](https://github.com/bgiarrizzo/release-test/issues/6)) ([c5ffc61](https://github.com/bgiarrizzo/release-test/commit/c5ffc61453f93370a8d4fe7bc8a9438d2d68f769))
+* **folder:** test7 ([#8](https://github.com/bgiarrizzo/release-test/issues/8)) ([cb6831d](https://github.com/bgiarrizzo/release-test/commit/cb6831d65d530fe725db5e13bbbb0a980bb69e65))
+* **folder:** test9 ([#9](https://github.com/bgiarrizzo/release-test/issues/9)) ([80635ca](https://github.com/bgiarrizzo/release-test/commit/80635ca5747f4983825aeec54d160fde571afaf3))
+* **readme:** test ([0e8b1f3](https://github.com/bgiarrizzo/release-test/commit/0e8b1f378d8c739a039821ef859c31b43077d23c))
+* **release:** workflow cli ([715a728](https://github.com/bgiarrizzo/release-test/commit/715a728031163fc5ba2ff76eb7ed41c88aaac883))
+* **test:** testMangeTesMorts ([#13](https://github.com/bgiarrizzo/release-test/issues/13)) ([9ce1110](https://github.com/bgiarrizzo/release-test/commit/9ce11109534c574a92a4b93eefc2959b55295e0e))
+* **test:** testNounours ([#15](https://github.com/bgiarrizzo/release-test/issues/15)) ([b5fbc33](https://github.com/bgiarrizzo/release-test/commit/b5fbc33d75471afbba762859bcc724ebdf69c494))
+
 ## [0.6.0](https://github.com/bgiarrizzo/release-test/compare/v0.5.0...v0.6.0) (2024-03-18)
 
 
