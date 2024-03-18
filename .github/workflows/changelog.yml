@@ -13,10 +13,6 @@ jobs:
   release-please-action:
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Print branch name
         run: |
           echo "ref: ${{ github.ref }}"
@@ -24,6 +20,11 @@ jobs:
           echo "base_ref: ${{ github.base_ref }}"
           echo "ref_name: ${{ github.ref_name }}"
           echo "event_name: ${{ github.event_name }}"
+          echo "commit name: ${{ github.event.head_commit.message }}"
+          
+      - uses: google-github-actions/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: NiqueToi
         if: github.head_ref == 'release-please--branches--main'
