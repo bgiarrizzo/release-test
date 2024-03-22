@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.16.0](https://github.com/bgiarrizzo/release-test/compare/v0.15.0...v0.16.0) (2024-03-22)
+
+
+### Features
+
+* **test:** feature de test 1 ([#34](https://github.com/bgiarrizzo/release-test/issues/34)) ([f5dbfa3](https://github.com/bgiarrizzo/release-test/commit/f5dbfa38310f6dd4aba13942554921b32c614968))
+
 ## [0.15.0](https://github.com/bgiarrizzo/release-test/compare/v0.14.0...v0.15.0) (2024-03-18)
 
 
