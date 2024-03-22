@@ -3,7 +3,8 @@ name: changelog
 permissions:
   id-token: write
   contents: write
-  actions: write    
+  actions: write
+  pull-requests: write
 
 on:
   push:
@@ -38,7 +39,8 @@ jobs:
     permissions:
       id-token: write
       contents: write
-      actions: write    
+      actions: write
+      pull-requests: write      
     needs: release-please-action
     uses: ./.github/workflows/release.yml
     secrets: inherit
