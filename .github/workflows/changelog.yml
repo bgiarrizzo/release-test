@@ -1,8 +1,9 @@
 name: changelog
 
 permissions:
+  id-token: write
   contents: write
-  pull-requests: write
+  actions: write    
 
 on:
   push:
