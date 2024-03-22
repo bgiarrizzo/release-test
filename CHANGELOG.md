@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.20.0](https://github.com/bgiarrizzo/release-test/compare/v0.19.0...v0.20.0) (2024-03-22)
+
+
+### Features
+
+* **test:** feat puis refactor ([#44](https://github.com/bgiarrizzo/release-test/issues/44)) ([ebd339c](https://github.com/bgiarrizzo/release-test/commit/ebd339cfbfc3c93c799e071eab51525dabf0d3c1))
+* **test:** test ([6ed267c](https://github.com/bgiarrizzo/release-test/commit/6ed267ca3616bdde723b1b07815db1f4f5cf17cd))
+
 ## [0.19.0](https://github.com/bgiarrizzo/release-test/compare/v0.18.0...v0.19.0) (2024-03-22)
 
 
