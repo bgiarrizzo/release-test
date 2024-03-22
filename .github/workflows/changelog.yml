@@ -11,7 +11,6 @@ on:
 
 env:
   AUTORELEASE_DEFAULT_LABEL: "autorelease: pending"
-  AUTORELEASE_TAGGED_LABEL: "autorelease: tagged"
 
 jobs:
   release-please-action:
@@ -19,16 +18,29 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Remove Label autorelease pending
-        run: |
-          gh pr list -s merged -l ${{ env.AUTORELEASE_DEFAULT_LABEL }} --json number jq -r '.[].number' | xargs -n1 -I {} gh pr edit {} --remove-label ${{ env.AUTORELEASE_DEFAULT_LABEL }}
-
       - uses: google-github-actions/release-please-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: simple
 
+      - name: Get Name of release from commit name
+        id: get_release_name
+        run: |
+          commit_message="${{ github.event.head_commit.message }}"
+          version_tag="v$(echo "$commit_message" | cut -d' ' -f3)"
+          echo "version_tag=$version_tag" >> "$GITHUB_OUTPUT"
+        if: "${{ startsWith(github.event.head_commit.message, 'chore(master): release') }}"
+      
+    outputs:
+      version_tag: ${{ steps.get_release_name.outputs.version_tag }}
+  
   release:
-    name: Release
+    permissions:
+      id-token: write
+      contents: write
+      actions: write    
     needs: release-please-action
     uses: ./.github/workflows/release.yml
-    if: "${{ startsWith(github.event.head_commit.message, 'chore(main): release') }}"
+    secrets: inherit
+    with:
+      version_tag: ${{ needs.release-please-action.outputs.version_tag }}
+    if: "${{ startsWith(github.event.head_commit.message, 'chore(master): release') }}"
