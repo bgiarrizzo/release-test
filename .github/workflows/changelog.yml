@@ -30,7 +30,7 @@ jobs:
           commit_message="${{ github.event.head_commit.message }}"
           version_tag="v$(echo "$commit_message" | cut -d' ' -f3)"
           echo "version_tag=$version_tag" >> "$GITHUB_OUTPUT"
-        if: "${{ startsWith(github.event.head_commit.message, 'chore(master): release') }}"
+        if: "${{ startsWith(github.event.head_commit.message, 'chore(main): release') }}"
       
     outputs:
       version_tag: ${{ steps.get_release_name.outputs.version_tag }}
@@ -46,4 +46,4 @@ jobs:
     secrets: inherit
     with:
       version_tag: ${{ needs.release-please-action.outputs.version_tag }}
-    if: "${{ startsWith(github.event.head_commit.message, 'chore(master): release') }}"
+    if: "${{ startsWith(github.event.head_commit.message, 'chore(main): release') }}"
