@@ -15,7 +15,7 @@ permissions:
 jobs:
   release:
     name: release version
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: ubuntu-latest
     steps:
       - name: Create release version
         uses: "marvinpinto/action-automatic-releases@latest"
