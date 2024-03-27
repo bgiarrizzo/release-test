@@ -11,10 +11,34 @@ on:
 
 jobs:
   release-please-action:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, standard]
     steps:
       - uses: actions/checkout@v4
 
       - uses: google-github-actions/release-please-action@v4
+        id: changelog
         with:
-          config-file: release-please-config.json
+          release-type: simple
+      
+      - name: Get Name of release from commit name
+        id: get_release_name
+        run: |
+          commit_message="${{ github.event.head_commit.message }}"
+          version_tag="v$(echo "$commit_message" | cut -d' ' -f3)"
+          echo "version_tag=$version_tag" >> "$GITHUB_OUTPUT"
+        if: "${{ startsWith(github.event.head_commit.message, 'chore(main): release') }}"
+
+    outputs:
+      version_tag: ${{ steps.get_release_name.outputs.version_tag }}
+
+  release:
+    permissions:
+      id-token: write
+      contents: write
+      actions: write    
+    needs: release-please-action
+    uses: ./.github/workflows/release.yml
+    secrets: inherit
+    with:
+      version_tag: ${{ needs.release-please-action.outputs.version_tag }}
+    if: "${{ startsWith(github.event.head_commit.message, 'chore(main): release') }}"
