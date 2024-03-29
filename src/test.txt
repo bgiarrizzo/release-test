@@ -17,3 +17,4 @@ test_refactor_4
 test_refactor_5
 test_refactor_5
 test_refactor_6
+test_refactor_7
