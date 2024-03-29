@@ -1,5 +1,6 @@
 {
     "draft": false,
+    "versioning": "always-bump-patch",
     "changelog-sections": [
         {
             "type": "feat",
