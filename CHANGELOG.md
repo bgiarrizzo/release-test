@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.21.1](https://github.com/bgiarrizzo/release-test/compare/v0.21.0...v0.21.1) (2024-03-29)
+
+
+### Bug Fixes
+
+* **test:** test refactor_5 ([#55](https://github.com/bgiarrizzo/release-test/issues/55)) ([8127403](https://github.com/bgiarrizzo/release-test/commit/8127403bbf632b48fb09b55271dfda9c6ee8b9e7))
+
 ## [0.21.0](https://github.com/bgiarrizzo/release-test/compare/v0.20.0...v0.21.0) (2024-03-27)
 
 
