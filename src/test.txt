@@ -10,3 +10,4 @@ testCaRaceHure
 testCetaitSurEnFait
 testAbouDidé
 testGroMichel
+test_refactor
