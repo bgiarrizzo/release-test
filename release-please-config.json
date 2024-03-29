@@ -1,6 +1,5 @@
 {
     "draft": false,
-    "versioning": "always-bump-patch",
     "changelog-sections": [
         {
             "type": "feat",
@@ -37,7 +36,8 @@
     ],
     "packages": {
         ".": {
-            "release-type": "simple"
+            "release-type": "simple",
+            "versioning": "always-bump-patch"
         }
     },
     "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
