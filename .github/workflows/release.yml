@@ -1,0 +1,34 @@
+name: Release and Docker build and push to production JFrog
+
+on:
+  workflow_call:
+    inputs:
+      version_tag:
+        description: "tag of the release"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  release:
+    name: release version
+    runs-on: [self-hosted, Linux, standard]
+    if: "${{ inputs.version_tag != '' }}"
+
+    steps:
+      # Import secrets from the DSP namespace in Vault based on JWT role
+      - name: test
+        run: echo ${{ inputs.version_tag }}
+
+  docker-build-push:
+    timeout-minutes: 60
+    name: Docker Build and Push
+    runs-on: [self-hosted, Linux, standard]
+    if: "${{ inputs.version_tag != '' }}"
+
+    steps:
+    - name: test
+      run: echo ${{ inputs.version_tag }}

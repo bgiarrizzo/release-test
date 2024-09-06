@@ -3,21 +3,56 @@ name: changelog
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
+  actions: write  
 
 on:
   push:
     branches:
       - main
 
+env:
+  AUTORELEASE_DEFAULT_LABEL: "autorelease: pending"
+
+
 jobs:
   release-please-action:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, standard]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
+
+      # This step is optional and is only needed if you want to remove the autorelease: pending label from PRs (in case of github api momentary outage)
+      # - name: Remove Label autorelease pending
+      #   run: |
+      #     gh pr list -s merged -l ${{ env.AUTORELEASE_DEFAULT_LABEL }} --json number jq '.[].number' | xargs -n1 -I {} gh pr edit {} --remove-label ${{ env.AUTORELEASE_DEFAULT_LABEL }}
 
       - uses: google-github-actions/release-please-action@v4
-        id: changelog
+        id: release
         with:
           release-type: simple
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
+        
+        
+      - name: Get Name of release from commit name
+        id: get_release_name
+        run: |
+          commit_message="${{ github.event.head_commit.message }}"
+          relevant_line=$(echo $commit_message | grep '^chore(master): release' | head -n 1)
+          version_tag=v$(echo $relevant_line | awk '{ print $3 }')
+          echo "version_tag=$version_tag" >> "$GITHUB_OUTPUT"
+        if: ${{ steps.release.outputs.release_created }}
+      
+    outputs:
+      version_tag: ${{ steps.get_release_name.outputs.version_tag }}
+      release_created: ${{ steps.release.outputs.release_created }}
+
+  release:
+    permissions:
+      id-token: write
+      contents: write
+      actions: write
+    needs: release-please-action
+    uses: ./.github/workflows/release.yml
+    secrets: inherit
+    with:
+      version_tag: ${{ needs.release-please-action.outputs.version_tag }}
+    if: ${{ needs.release-please-action.outputs.release_created == 'true' }}
