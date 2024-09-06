@@ -15,7 +15,7 @@ permissions:
 jobs:
   release:
     name: release version
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: [ubuntu-latest]
     if: "${{ inputs.version_tag != '' }}"
 
     steps:
@@ -26,7 +26,7 @@ jobs:
   docker-build-push:
     timeout-minutes: 60
     name: Docker Build and Push
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: [ubuntu-latest]
     if: "${{ inputs.version_tag != '' }}"
 
     steps:
