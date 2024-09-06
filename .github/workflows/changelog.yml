@@ -36,7 +36,7 @@ jobs:
         id: get_release_name
         run: |
           commit_message="${{ github.event.head_commit.message }}"
-          relevant_line=$(echo $commit_message | grep '^chore(master): release' | head -n 1)
+          relevant_line=$(echo $commit_message | grep '^chore(main): release' | head -n 1)
           version_tag=v$(echo $relevant_line | awk '{ print $3 }')
           echo "version_tag=$version_tag" >> "$GITHUB_OUTPUT"
         if: ${{ steps.release.outputs.release_created }}
