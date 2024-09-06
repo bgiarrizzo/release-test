@@ -15,7 +15,7 @@ permissions:
 jobs:
   input_validation:
     name: input validation
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: [ubuntu-latest]
     steps:
       - name: Validate input
         run: |
