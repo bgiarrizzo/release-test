@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       version_tag:
-        description: "tag of the release"
+        description: "release tag"
         required: true
         type: string
 
@@ -13,13 +13,23 @@ permissions:
   id-token: write
 
 jobs:
+  input_validation:
+    name: input validation
+    runs-on: [self-hosted, Linux, standard]
+    steps:
+      - name: Validate input
+        run: |
+          if [ -z "${{ inputs.version_tag }}" ]; then
+            echo "Missing version_tag input"
+            exit 1
+          fi
+
   release:
     name: release version
     runs-on: [ubuntu-latest]
-    if: "${{ inputs.version_tag != '' }}"
+    needs: input_validation
 
     steps:
-      # Import secrets from the DSP namespace in Vault based on JWT role
       - name: test
         run: echo ${{ inputs.version_tag }}
 
@@ -27,7 +37,7 @@ jobs:
     timeout-minutes: 60
     name: Docker Build and Push
     runs-on: [ubuntu-latest]
-    if: "${{ inputs.version_tag != '' }}"
+    needs: input_validation
 
     steps:
     - name: test

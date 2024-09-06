@@ -30,19 +30,9 @@ jobs:
         id: release
         with:
           release-type: simple
-        
-        
-      - name: Get Name of release from commit name
-        id: get_release_name
-        run: |
-          commit_message="${{ github.event.head_commit.message }}"
-          relevant_line=$(echo $commit_message | grep '^ *chore(main): release' | head -n 1)
-          version_tag=v$(echo $relevant_line | awk '{ print $3 }')
-          echo "version_tag=$version_tag" >> "$GITHUB_OUTPUT"
-        if: ${{ steps.release.outputs.release_created }}
       
     outputs:
-      version_tag: ${{ steps.get_release_name.outputs.version_tag }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
       release_created: ${{ steps.release.outputs.release_created }}
 
   release:
@@ -54,5 +44,5 @@ jobs:
     uses: ./.github/workflows/release.yml
     secrets: inherit
     with:
-      version_tag: ${{ needs.release-please-action.outputs.version_tag }}
+      version_tag: "v${{ needs.release-please-action.outputs.tag_name }}"
     if: ${{ needs.release-please-action.outputs.release_created == 'true' }}
