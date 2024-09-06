@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.2](https://github.com/bgiarrizzo/release-test/compare/v0.22.1...v0.22.2) (2024-09-06)
+
+
+### Bug Fixes
+
+* **workflows:** changlog + release ([8b4831b](https://github.com/bgiarrizzo/release-test/commit/8b4831bd688deb65521e3f88d4b9b81c4b92dde9))
+
 ## [0.22.1](https://github.com/bgiarrizzo/release-test/compare/v0.22.0...v0.22.1) (2024-09-06)
 
 
