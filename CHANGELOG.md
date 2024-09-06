@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.23.0](https://github.com/bgiarrizzo/release-test/compare/v0.22.2...v0.23.0) (2024-09-06)
+
+
+### Features
+
+* **test:** test dsp_api_2 ([d464025](https://github.com/bgiarrizzo/release-test/commit/d464025f2687dd7401a7e795ad6ef9f8c4b83d3d))
+
 ## [0.22.2](https://github.com/bgiarrizzo/release-test/compare/v0.22.1...v0.22.2) (2024-09-06)
 
 
