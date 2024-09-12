@@ -22,3 +22,4 @@ test_release_9
 test_release_10
 test_empty_manifest
 test_empty_manifest_file
+test_test_mepty_manifest
