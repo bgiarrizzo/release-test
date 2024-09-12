@@ -46,10 +46,8 @@
             "draft": false,
             "release-type": "simple",
             "changelog-type": "github",
-            "versioning": "always-bump-patch",
-            
+            "versioning": "always-bump-patch"
         }
     },
-    "version-file": "version.txt",
     "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
