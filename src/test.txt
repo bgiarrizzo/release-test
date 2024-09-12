@@ -3,3 +3,4 @@ test_dsp_api_2
 test_dsp_api_3
 test_dsp_api_4
 test_marvin_pinto
+test_marvin_pinto_2
