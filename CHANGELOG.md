@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.32.0](https://github.com/bgiarrizzo/release-test/compare/v0.31.0...v0.32.0) (2024-09-12)
+
+
+### Features
+
+* **test:** test marvin_pinto_8 ([02c09e6](https://github.com/bgiarrizzo/release-test/commit/02c09e686cf8b1cd770419e8cf7a62b783f2d8b1))
+
 ## [0.31.0](https://github.com/bgiarrizzo/release-test/compare/v0.30.0...v0.31.0) (2024-09-12)
 
 
