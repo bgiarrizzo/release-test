@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.1 (2024-09-12)
+
+## What's Changed
+* chore(main): release 1.0.0 by @github-actions in https://github.com/bgiarrizzo/release-test/pull/95
+* feat(test): test release_9 by @bgiarrizzo in https://github.com/bgiarrizzo/release-test/pull/96
+
+
+**Full Changelog**: https://github.com/bgiarrizzo/release-test/compare/v1.0.0...v1.0.1
+
 ## 1.0.0 (2024-09-12)
 
 ## What's Changed
