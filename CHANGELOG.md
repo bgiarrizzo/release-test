@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (2024-09-12)
+
+**Full Changelog**: https://github.com/bgiarrizzo/release-test/compare/v0.34.1...v1.0.0
+
 ## 0.34.1 (2024-09-12)
 
 ## What's Changed
