@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.34.1 (2024-09-12)
+
+## What's Changed
+* feat(test): test release_6 by @bgiarrizzo in https://github.com/bgiarrizzo/release-test/pull/90
+* feat(test): test release_7 by @bgiarrizzo in https://github.com/bgiarrizzo/release-test/pull/91
+
+
+**Full Changelog**: https://github.com/bgiarrizzo/release-test/compare/v0.34.0...v0.34.1
+
 ## [0.34.0](https://github.com/bgiarrizzo/release-test/compare/v0.33.0...v0.34.0) (2024-09-12)
 
 
