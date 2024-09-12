@@ -4,7 +4,7 @@ permissions:
   contents: write
   pull-requests: write
   id-token: write
-  actions: write  
+  actions: write
 
 on:
   push:
@@ -37,8 +37,8 @@ jobs:
 
   release:
     permissions:
-      id-token: write
       contents: write
+      id-token: write
       actions: write
     needs: release-please-action
     uses: ./.github/workflows/release.yml
