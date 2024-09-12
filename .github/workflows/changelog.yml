@@ -44,5 +44,5 @@ jobs:
     uses: ./.github/workflows/release.yml
     secrets: inherit
     with:
-      version_tag: "v${{ needs.release-please-action.outputs.tag_name }}"
+      version_tag: ${{ needs.release-please-action.outputs.tag_name }}
     if: ${{ needs.release-please-action.outputs.release_created == 'true' }}
