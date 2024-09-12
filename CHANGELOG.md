@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.33.0](https://github.com/bgiarrizzo/release-test/compare/v0.32.0...v0.33.0) (2024-09-12)
+
+
+### Features
+
+* **test:** test release_1 ([61001de](https://github.com/bgiarrizzo/release-test/commit/61001defe5b5b0d73f89b8afc7a250369bcc5622))
+
 ## [0.32.0](https://github.com/bgiarrizzo/release-test/compare/v0.31.0...v0.32.0) (2024-09-12)
 
 
