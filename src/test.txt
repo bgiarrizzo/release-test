@@ -9,3 +9,4 @@ test_marvin_pinto_4
 test_marvin_pinto_5
 test_marvin_pinto_6
 test_marvin_pinto_7
+test_marvin_pinto_8
