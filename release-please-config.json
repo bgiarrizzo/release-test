@@ -1,6 +1,5 @@
 {
     "draft": false,
-    "changelog-type": "github",
     "changelog-sections": [
         {
             "type": "feat",
