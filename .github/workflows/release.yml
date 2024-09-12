@@ -30,8 +30,11 @@ jobs:
     needs: input_validation
 
     steps:
-      - name: test
-        run: echo ${{ inputs.version_tag }}
+      - name: Create release version
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
 
   docker-build-push:
     timeout-minutes: 60
