@@ -21,3 +21,4 @@ test_release_8
 test_release_9
 test_release_10
 test_empty_manifest
+test_empty_manifest_file
