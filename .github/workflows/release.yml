@@ -24,19 +24,6 @@ jobs:
             exit 1
           fi
 
-  release:
-    name: release version
-    runs-on: [ubuntu-latest]
-    needs: input_validation
-
-    steps:
-      - name: Create release version
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "${{ inputs.version_tag }}"
-          prerelease: false
-
   docker-build-push:
     timeout-minutes: 60
     name: Docker Build and Push
