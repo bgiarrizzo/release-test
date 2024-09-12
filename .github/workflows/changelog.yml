@@ -30,6 +30,7 @@ jobs:
         id: release
         with:
           release-type: simple
+          skip-github-release: true
       
     outputs:
       tag_name: ${{ steps.release.outputs.tag_name }}
