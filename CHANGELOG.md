@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0 (2024-09-12)
+
+## What's Changed
+* feat(test): test release_10 by @bgiarrizzo in https://github.com/bgiarrizzo/release-test/pull/98
+
+
+**Full Changelog**: https://github.com/bgiarrizzo/release-test/compare/v1.0.1...v1.1.0
+
 ## 1.0.1 (2024-09-12)
 
 ## What's Changed
