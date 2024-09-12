@@ -12,3 +12,4 @@ test_marvin_pinto_7
 test_marvin_pinto_8
 test_release_1
 test_release_last
+test_release_3
