@@ -16,3 +16,4 @@ test_release_3
 test_release_4
 test_release_5
 test_release_6
+test_release_7
