@@ -3,8 +3,6 @@ name: changelog
 permissions:
   contents: write
   pull-requests: write
-  id-token: write
-  actions: write
 
 on:
   push:
@@ -13,7 +11,6 @@ on:
 
 env:
   AUTORELEASE_DEFAULT_LABEL: "autorelease: pending"
-
 
 jobs:
   release-please-action:
@@ -28,15 +25,14 @@ jobs:
 
       - uses: google-github-actions/release-please-action@v4
         id: release
-      
     outputs:
       tag_name: ${{ steps.release.outputs.tag_name }}
       release_created: ${{ steps.release.outputs.release_created }}
 
   release:
     permissions:
-      contents: write
       id-token: write
+      contents: write
       actions: write
     needs: release-please-action
     uses: ./.github/workflows/release.yml
