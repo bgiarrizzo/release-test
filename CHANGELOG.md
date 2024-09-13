@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.0](https://github.com/bgiarrizzo/release-test/compare/v1.1.0...v1.2.0) (2024-09-13)
+
+
+### Features
+
+* **test:** test empty_manifest ([019badb](https://github.com/bgiarrizzo/release-test/commit/019badb066df0e5b843c8f17c4bba7574a0225f0))
+* **test:** test empty_manifest_file ([2eebc83](https://github.com/bgiarrizzo/release-test/commit/2eebc83f4e40880ef33acd55f33ec386d1a6c652))
+* **test:** test test_mepty_manifest ([a6ca94f](https://github.com/bgiarrizzo/release-test/commit/a6ca94f48146e00b5669446ff02dbf3c4fc23ac9))
+
 ## 1.0.0 (2024-09-12)
 
 ## What's Changed
