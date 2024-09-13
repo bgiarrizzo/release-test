@@ -1,3 +1,2 @@
 # release-test
-
-test dsp api 1
+test_goreleaser_1
