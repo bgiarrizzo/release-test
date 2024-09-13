@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/bgiarrizzo/release-test/compare/v1.2.0...v1.3.0) (2024-09-13)
+
+
+### Features
+
+* **test:** test goreleaser_1 ([cf02e53](https://github.com/bgiarrizzo/release-test/commit/cf02e53d4c1ceb6b321d62b4b784875ed6f40a8b))
+
 ## [1.2.0](https://github.com/bgiarrizzo/release-test/compare/v1.1.0...v1.2.0) (2024-09-13)
 
 
